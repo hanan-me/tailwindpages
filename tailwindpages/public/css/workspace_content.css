@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Apply the Poppins font */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Gradient backgrounds for the cards */
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.bg-gradient-yellow {
+    background: linear-gradient(135deg, #fbc8d4 0%, #fdea9b 100%);
+}
+
+.bg-gradient-red {
+    background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+}
+
+/* Additional styling for the cards */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Styling the card icons */
+.card-body i {
+    color: #fff;
+    font-size: 36px;
+}
+
+
+/* Apply smooth transitions to all inner divs */
+.container .row .col-md-3 .p-3 {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Hover effect on the inner div */
+.container .row .col-md-3 .p-3:hover {
+    transform: translateY(-10px);  /* Move the div up a bit */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Add shadow for depth */
+    background-color: #e2e6ea;  /* Light grey background on hover */
+}
+
+/* Optional: Active state when clicked */
+.container .row .col-md-3 .p-3:active {
+    transform: translateY(0);  /* Reset on click */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);  /* Slightly darker shadow on click */
+}
+/* Styling the count numbers */
+#item-count, #customer-count, #sales-invoice-count, #purchase-invoice-count {
+    font-size: 2.5rem; /* Increase size */
+    font-weight: bold;
+    color: #fff;
+}

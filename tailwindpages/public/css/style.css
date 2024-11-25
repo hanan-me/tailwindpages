@@ -1,0 +1,76 @@
+/* Sidebar and main content layout */
+.layout-main-section {
+  display: flex; /* Align items horizontally */
+  gap: 16px; /* Space between sidebar and content */
+  flex-wrap: nowrap; /* Ensure no wrapping on desktop */
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100vh; /* Full height */
+  overflow-y: auto;
+  width: 250px; /* Fixed sidebar width */
+}
+.sidebar-item:hover {
+  cursor: pointer;
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1; /* Take remaining space */
+  padding: 20px;
+}
+/* CSS to ensure responsiveness */
+.container.page-body {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px; /* Optional padding */
+  }
+  
+  @media (max-width: 768px) {
+    .container.page-body {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  }
+  
+/* For mobile view, sidebar is hidden and shown via toggle */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    background-color: #f8fafc;
+    display: none;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.visible {
+    display: block; /* Show sidebar when visible */
+  }
+
+  .main-content {
+    margin-left: 0; /* No need for margin on mobile */
+    width: 100%;
+  }
+
+  .layout-main-section {
+    display: block;
+  }
+
+  .ellipsis {
+    display: block !important;
+  }
+}
+
+/* Add transitions for smoothness */
+* {
+  transition: all 0.3s ease;
+}
+
+
